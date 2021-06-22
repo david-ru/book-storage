@@ -1,8 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Book } from 'src/app/model/book.entity';
-import { BookRecordsService } from 'src/app/services/book-records.service';
-import { BookManagementRoutingModule } from '../../book-management-routing.module';
+import { Book } from '../../../../model/book.entity';
+import { BookRecordsService } from '../../../../services/book-records.service';
 
 const MAX_STEPS = 3;
 

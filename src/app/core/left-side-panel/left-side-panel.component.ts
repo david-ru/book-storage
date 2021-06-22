@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable, Subject, Subscription } from 'rxjs';
-import { delay, takeUntil } from 'rxjs/operators';
-import { BookRecordsService } from 'src/app/services/book-records.service';
+import { Observable } from 'rxjs';
+import { delay } from 'rxjs/operators';
+import { BookRecordsService } from '../../services/book-records.service';
 
 @Component({
   selector: 'dru-left-side-panel',

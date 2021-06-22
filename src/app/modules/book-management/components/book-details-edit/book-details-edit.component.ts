@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Book } from 'src/app/model/book.entity';
-import { BookRecordsService } from 'src/app/services/book-records.service';
+import { Book } from '../../../../model/book.entity';
+import { BookRecordsService } from '../../../../services/book-records.service';
 
 @Component({
   selector: 'dru-book-details-edit',
