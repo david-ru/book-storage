@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card__content">
+    <div class="card__content__image">
+      <img [src]="image">
+    </div>
+    <div class="card__content__data">
+      <div class="card__content__data__first-line ellipsis">
+        <label>{{firstLine}}</label>
+      </div>
+      <div>
+        <label>{{secondLine}}</label>
+      </div>
+      <div>
+        <label>{{thirdLine}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="card__actions">
+    <i class="bi bi-pencil" *ngIf="editable" (click)="onEditClick()"></i>
+    <i class="bi bi-trash" *ngIf="deletable" (click)="onDeleteClick()"></i>
+  </div>
+</div>

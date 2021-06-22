@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "celoris-frontend-ui-challenge": {
+    "book-storage": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -12,17 +12,16 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "dru",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/celoris-frontend-ui-challenge",
+            "outputPath": "dist/book-storage",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -30,7 +29,13 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -43,7 +48,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -66,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "celoris-frontend-ui-challenge:build"
+            "browserTarget": "book-storage:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "celoris-frontend-ui-challenge:build:production"
+              "browserTarget": "book-storage:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "celoris-frontend-ui-challenge:build"
+            "browserTarget": "book-storage:build"
           }
         },
         "test": {
@@ -114,15 +118,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "celoris-frontend-ui-challenge:serve"
+            "devServerTarget": "book-storage:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "celoris-frontend-ui-challenge:serve:production"
+              "devServerTarget": "book-storage:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "celoris-frontend-ui-challenge"
+  "defaultProject": "book-storage"
 }

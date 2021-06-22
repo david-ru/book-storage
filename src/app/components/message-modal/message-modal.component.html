@@ -1,0 +1,12 @@
+<div #messageModal class="message-modal">
+  <div class="message-modal__content">
+    <div class="message-modal__content__information">
+      <i class="bi bi-exclamation-triangle warning"></i>
+      <label>{{message}}</label>
+    </div>
+    <div class="message-modal__content__buttons">
+      <button type="button" class="secondary-button" (click)="onClickCancel()">Cancel</button>
+      <button type="button" class="primary-button" (click)="onClickOk()">OK</button>
+    </div>
+  </div>
+</div>

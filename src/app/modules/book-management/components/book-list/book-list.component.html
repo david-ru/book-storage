@@ -1,0 +1,27 @@
+<dru-content-header
+  class="header"
+  [currentPage]="currentPage"
+  [totalPages]="totalPages"
+  (searchKeyReleased)="filterBooksPaginated($event, 1)"
+  (nextPageClicked)="getNextPage()"
+  (previousPageClicked)="getPreviousPage()"
+></dru-content-header>
+
+<div class="card-wrapper scrollbar">
+  <dru-card *ngFor="let book of searchBookList" class="small-card"
+    [id]="book.id"
+    [image]="book.image"
+    [firstLine]="book.title"
+    [secondLine]="book.author"
+    [thirdLine]="book.releaseDate"
+    [editable]="book.editable"
+    [deletable]="book.deletable"
+    (onClickedEdit)="onEditCard($event)"
+    (onClickedDelete)="showConfirmationMessage($event)"
+  ></dru-card>
+</div>
+
+<dru-message-modal 
+  *ngIf="showMessageModal" [selectedItem]="selectedBookId" message="Are you sure you want delete the information?"
+  (clickedOk)="deleteCard($event)" (clickedCancel)="closeMessageModal()"
+></dru-message-modal>

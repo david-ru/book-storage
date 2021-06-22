@@ -1,0 +1,65 @@
+@import '../../../../../assets/scss/variables.scss';
+
+.add-wizard {
+  padding: 1rem;
+  max-width: 28.3rem;
+
+  &__header {
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px $grey-c solid;
+
+    .secondary-button {
+      margin-right: 0.5rem;
+    }
+
+    label {
+      text-align: center;
+      min-width: 16rem;
+      display: inline-block;
+    }
+
+    .primary-button {
+      margin-left: 0.5rem;
+      float: right;
+    }
+  }
+
+  &__content {
+    display: block;
+
+    input[type="text"] {
+      width: 95%;
+    }
+
+    input[type="checkbox"] {
+      float: right;
+      display: inline-block;
+    }
+
+    textarea {
+      width: 95%;
+    }
+  }
+
+  &__save-button {
+    margin-top: 2rem;
+    float: right;
+
+    button:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.inline {
+  display: inline-block;
+}
+
+.width-25 {
+  width: 25%;
+}
+
+.width-100 {
+  width: 100%;
+}

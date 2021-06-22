@@ -1,0 +1,10 @@
+<div class="navigation-panel">
+  <p>Navigation panel</p>
+
+  <div class="navigation-panel__options">
+    <button type="button" class="primary-button" (click)="onClickAdd()" [disabled]="isAdditionInProgress$ | async">
+      <i class="bi bi-plus-circle"></i>
+      <label>Add new book</label>
+    </button>
+  </div>
+</div>

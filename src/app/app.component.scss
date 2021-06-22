@@ -1,0 +1,27 @@
+@import '../assets/scss/variables.scss';
+
+:host {
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.data {
+  top: $header-height;
+  position: relative;
+  display: table;
+
+  &__left-panel {
+    display: table-cell;
+    min-width: 16rem;
+    height: calc(100vh - 3.5rem);
+    vertical-align: top;
+    border-right: $grey-c 1px solid;
+  }
+
+  &__content {
+    display: table-cell;
+    width: 100%;
+  }
+}

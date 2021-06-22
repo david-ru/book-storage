@@ -1,0 +1,19 @@
+<div class="header">
+  <input class="header__search" type="input" [(ngModel)]="searchText" placeholder="Enter your search text here" (keyup)="onKeyUp()"/>
+
+  <div class="header__pagination" *ngIf="totalPages > 1">
+    <button type="button" class="header__pagination__previous" (click)="onClickPreviousPage()"
+      (mousedown)="buttonPreviousPressed = true" (mouseup)="buttonPreviousPressed = false" 
+      [ngClass]="{ 'button-pressed': buttonPreviousPressed === true }"
+    >
+      <i class="bi bi-skip-start"></i>
+    </button>
+    <label>Page {{currentPage}} of {{totalPages}} </label>
+    <button type="button" class="header__pagination__next" (click)="onClickNextPage()"
+      (mousedown)="buttonNextPressed = true" (mouseup)="buttonNextPressed = false" 
+      [ngClass]="{ 'button-pressed': buttonNextPressed === true }"
+    >
+      <i class="bi bi-skip-end"></i>
+    </button>
+  </div>
+</div>

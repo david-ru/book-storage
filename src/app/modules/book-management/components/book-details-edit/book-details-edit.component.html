@@ -1,0 +1,30 @@
+<div class="edit-details scrollbar" *ngIf="book">
+  <div class="edit-details__content">
+    <div class="edit-details__content__information">
+      <div class="field">
+        <label>Title</label>
+        <input type="text" [(ngModel)]="book.title"/>
+      </div>
+      <div class="field">
+        <label>Author</label>
+        <input type="text" [(ngModel)]="book.author"/>
+      </div>
+      <div class="field">
+        <label>Genres</label>
+        <input type="text" [(ngModel)]="book.genres"/>
+      </div>
+      <div class="field">
+        <label>Synopsis</label>
+        <textarea [(ngModel)]="book.synopsis"></textarea>
+      </div>
+      <div class="field">
+        <label>Release Date</label>
+        <input type="text" [(ngModel)]="book.releaseDate"/>
+      </div>
+    </div>
+    <div class="edit-details__buttons">
+      <button type="button" class="primary-button" (click)="onClickOk()">OK</button>
+      <button type="button" class="secondary-button" (click)="onClickCancel()">Cancel</button>
+    </div>
+  </div>
+</div>

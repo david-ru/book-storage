@@ -1,0 +1,54 @@
+@import '../../../assets/scss/variables.scss';
+
+.header {
+  display: table;
+  border-bottom: $grey-c 1px solid;
+  padding-bottom: 1rem;
+  width: 100%;
+
+  @media screen and (max-width: 670px) {
+    display: block;
+  }
+
+  &__search {
+    padding: 0.4em 0.6rem;
+    border: 1px $grey-c solid;
+    border-radius: 4px;
+    color: $grey-7;
+    display: table-cell;
+
+    @media screen and (max-width: 670px) {
+      display: block;
+    }
+
+    &:focus-visible {
+      outline: none;
+      background-color: azure;
+    }
+  }
+
+  &__pagination {
+    display: table-cell;
+    float: right;
+
+    @media screen and (max-width: 670px) {
+      display: block;
+      float: none;
+    }
+
+    *:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+
+    button {
+      border: 1px #cccccc solid;
+      height: 1.7rem;
+      width: 2rem;
+      border-radius: 6px;
+    }
+  }
+}
+
+.button-pressed {
+  background-color: $blue-f;
+}

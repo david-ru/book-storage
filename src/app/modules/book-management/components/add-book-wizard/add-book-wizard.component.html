@@ -1,0 +1,55 @@
+<div class="add-wizard">
+  <div class="add-wizard__header">
+    <button type="button" class="secondary-button" (click)="onClickPreviousStep()" [style.visibility]="currentStep > 1 ? 'visible' : 'hidden' ">
+      <i class="bi bi-skip-start"></i>
+      Step {{ calculatePreviousStepNumber() }}
+    </button>
+    <label>Step {{ currentStep }}. {{ getCurrentStepName() }}</label>
+    <button type="button" class="primary-button" (click)="onClickNextStep()" [style.visibility]="currentStep < this.maxSteps ? 'visible' : 'hidden' ">
+      Step {{ calculateNextStepNumber() }}
+      <i class="bi bi-skip-end"></i>
+    </button>
+  </div>
+
+  <div class="add-wizard__content" *ngIf="currentStep === 1">
+    <div class="field">
+      <label>Title</label>
+      <input class="wide-field" type="text" [(ngModel)]="newBook.title"/>
+    </div>
+    <div class="field">
+      <label>Author</label>
+      <input class="wide-field" type="text" [(ngModel)]="newBook.author"/>
+    </div>
+  </div>
+  <div class="add-wizard__content" *ngIf="currentStep === 2">
+    <div class="field">
+      <label>Genres</label>
+      <input class="wide-field" type="text" [(ngModel)]="newBook.genres"/>
+    </div>
+    <div class="field">
+      <label>Synopsis</label>
+      <textarea class="wide-field" [(ngModel)]="newBook.synopsis"></textarea>
+    </div>
+    <div class="field">
+      <label>Release Date</label>
+      <input class="wide-field" type="text" [(ngModel)]="newBook.releaseDate"/>
+    </div>
+  </div>
+  <div class="add-wizard__content width-25" *ngIf="currentStep === 3">
+    <div class="field width-100">
+      <label class="inline">Editable</label>
+      <input type="checkbox" [(ngModel)]="newBook.editable"/>
+    </div>
+    <div class="field">
+      <label class="inline">Deletable</label>
+      <input type="checkbox" [(ngModel)]="newBook.deletable"/>
+    </div>
+  </div>
+  <div class="add-wizard__save-button">
+    <button type="button" class="primary-button" (click)="onClickSaveAndExit()">
+      Save & Exit
+    </button>
+    <button type="button" class="secondary-button" (click)="onClickCancel()">
+      Cancel
+    </button>
+</div>

@@ -1,0 +1,39 @@
+@import '../../../../../assets/scss/variables.scss';
+
+:host {
+  --header-height: 3.5rem;
+  --padding-1: 1rem;
+}
+
+.edit-details {
+  padding: var(--padding-1);
+  height: calc(100vh - var(--header-height) - var(--padding-1));
+  overflow-y: auto;
+  max-width: 28.3rem;
+
+  &__content {
+    display: block;
+
+    &__information {
+      display: grid;
+
+      input {
+        width: 95%;
+      }
+  
+      textarea {
+        width: 95%;
+      }
+    }
+  }
+
+  &__buttons {
+    text-align: right;
+    padding-top: 1rem;
+    min-width: 10rem;
+
+    :not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
